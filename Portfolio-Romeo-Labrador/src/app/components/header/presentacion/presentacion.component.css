@@ -1,0 +1,14 @@
+img{
+    width: 400px;
+    margin: 10px;
+}
+div{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+p{
+    font-size: 35px;
+    line-height: 35px;
+    color:#48403c;
+    font-weight: bold;
+}
