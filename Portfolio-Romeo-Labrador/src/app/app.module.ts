@@ -16,6 +16,12 @@ import { BotonHabilidadesComponent } from './components/navegacion/boton-habilid
 import { BotonCertificadosComponent } from './components/navegacion/boton-certificados/boton-certificados.component';
 import { DisplayComponent } from './components/display/display.component';
 import { EstudiosTokenComponent } from './components/display/estudios-token/estudios-token.component';
+import { HabilidadesPageComponent } from './components/display/habilidades/habilidades-page/habilidades-page.component';
+import { HabilidadesTokenComponent } from './components/display/habilidades/habilidades-token/habilidades-token.component';
+import { DatePipe } from '@angular/common';
+import { CertificadosComponent } from './components/display/certificados/certificados.component';
+import { CertificadosTokenComponent } from './components/display/certificados/certificados-token/certificados-token.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +37,19 @@ import { EstudiosTokenComponent } from './components/display/estudios-token/estu
     BotonHabilidadesComponent,
     BotonCertificadosComponent,
     DisplayComponent,
-    EstudiosTokenComponent
+    EstudiosTokenComponent,
+    HabilidadesPageComponent,
+    HabilidadesTokenComponent,
+    CertificadosComponent,
+    CertificadosTokenComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule
   ],
-  providers: [],
+  providers: [DatePipe,DisplayComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
