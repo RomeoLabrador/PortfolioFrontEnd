@@ -22,6 +22,9 @@ import { DatePipe } from '@angular/common';
 import { CertificadosComponent } from './components/display/certificados/certificados.component';
 import { CertificadosTokenComponent } from './components/display/certificados/certificados-token/certificados-token.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { LogindisplayComponent } from './login/logindisplay/logindisplay.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { FooterComponent } from './components/footer/footer.component';
     HabilidadesTokenComponent,
     CertificadosComponent,
     CertificadosTokenComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    LoginComponent,
+    LogindisplayComponent
   ],
   imports: [
     BrowserModule,

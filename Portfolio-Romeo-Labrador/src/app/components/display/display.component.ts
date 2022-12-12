@@ -1,4 +1,5 @@
 import { Component, OnInit,Input,Output } from '@angular/core';
+import { DesplazamientoService } from '../desplazamiento.service';
 
 @Component({
   selector: 'app-display',
@@ -14,9 +15,23 @@ export class DisplayComponent implements OnInit {
 
   a:number = 0;
 
-  constructor() { }
+  constructor(private servicio:DesplazamientoService) { }
 
   ngOnInit(): void {
+    this.servicio.Ejecutar0.subscribe(data => {
+      this.a = 0;
+      console.log("Conexion exitosa");
+    })
+
+    this.servicio.Ejecutar1.subscribe(data =>{
+      this.a = 1;
+      console.log("conexion exitosa")
+    })
+
+    this.servicio.Ejecutar2.subscribe(data =>{
+      this.a = 2;
+      console.log("conexion exitosa")
+    })
   }
 
 }

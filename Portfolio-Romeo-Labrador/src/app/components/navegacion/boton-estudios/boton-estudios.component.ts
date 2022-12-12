@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DesplazamientoService } from '../../desplazamiento.service';
 
 @Component({
   selector: 'app-boton-estudios',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotonEstudiosComponent implements OnInit {
 
-  constructor() { }
+  
+
+  constructor(private servicio:DesplazamientoService) { }
 
   ngOnInit(): void {
+  }
+
+  Mostrar(){
+    this.servicio.Ejecutar0.emit();
   }
 
 }

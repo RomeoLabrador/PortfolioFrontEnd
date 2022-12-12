@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DesplazamientoService } from '../../desplazamiento.service';
 
 @Component({
   selector: 'app-boton-certificados',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotonCertificadosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private servicio:DesplazamientoService) { }
 
   ngOnInit(): void {
+  }
+
+  Mostrar(){
+    this.servicio.Ejecutar2.emit();
   }
 
 }
