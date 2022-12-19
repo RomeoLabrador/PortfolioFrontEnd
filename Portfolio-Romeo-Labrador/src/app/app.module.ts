@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +27,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { LogindisplayComponent } from './login/logindisplay/logindisplay.component';
+import { EstTokenEditComponent } from './components/display/edit/est-token-edit/est-token-edit.component';
+import { CerTokenEditComponent } from './components/display/edit/cer-token-edit/cer-token-edit.component';
+import { PersonaPruebaComponent } from './model/persona-prueba/persona-prueba.component';
 
 @NgModule({
   declarations: [
@@ -48,12 +53,17 @@ import { LogindisplayComponent } from './login/logindisplay/logindisplay.compone
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    LogindisplayComponent
+    LogindisplayComponent,
+    EstTokenEditComponent,
+    CerTokenEditComponent,
+    PersonaPruebaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [DatePipe,DisplayComponent],
   bootstrap: [AppComponent]

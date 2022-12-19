@@ -1,4 +1,5 @@
 import { Component, OnInit,Input,Output } from '@angular/core';
+import { DesplazamientoService } from 'src/app/components/desplazamiento.service';
 import { DisplayComponent } from '../../display.component';
 
 @Component({
@@ -8,13 +9,12 @@ import { DisplayComponent } from '../../display.component';
 })
 export class HabilidadesPageComponent implements OnInit {
 
-  constructor(
-    private Displaycomponent:DisplayComponent
-  ) { }
+  constructor(private Displaycomponent:DisplayComponent,protected servicio:DesplazamientoService) { }
 
  
 
   ngOnInit(): void {
+    
   }
 
   lista2:number [] = this.Displaycomponent.lista2;

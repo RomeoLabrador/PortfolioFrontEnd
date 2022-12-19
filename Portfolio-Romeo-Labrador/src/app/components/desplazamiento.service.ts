@@ -11,6 +11,16 @@ export class DesplazamientoService {
 
   @Output() Ejecutar2: EventEmitter<any> = new EventEmitter();
 
+  @Output() Borrar: EventEmitter<any> = new EventEmitter();
+
+  @Output() Guardar: EventEmitter<any> = new EventEmitter();
+
+  @Output() Agregar: EventEmitter<any> = new EventEmitter();
+
+  @Output() LoginSuccess: EventEmitter<any> = new EventEmitter();
+
   constructor() { }
+
+  show:number = 0;
 
 }

@@ -1,4 +1,13 @@
 <h2>Titulo</h2>
 <div class="progress">
     <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div *ngIf="servicio.show == 1" style="text-align: left;padding: 5px;">
+  <button class = "btn btn" (click)="eliminar()"><img src="../../../../assets/res/eliminar.png " 
+      class = "rounded-circle" 
+      style = "width: 30px;"></button>   
+  <button class = "btn btn" (click) = "guardar()"><img src="../../../../assets/res/Guardar.png" 
+      class = "rounded-circle" 
+      style = "width: 30px;"></button>
+  
   </div>

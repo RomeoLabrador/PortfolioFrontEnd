@@ -12,8 +12,17 @@ img{
     height:600px;
     margin:5px;
     float: left;
+    padding: 30px;
 }
 ul{
     padding-top:5px ;
     list-style-type: none;
+}
+
+p{
+    text-align: left;
+    font-size: 25px;
+    line-height: 25px;
+    color: #f5f2ec;
+    font-weight: bold;
 }

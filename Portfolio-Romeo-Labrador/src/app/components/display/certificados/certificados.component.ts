@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DesplazamientoService } from '../../desplazamiento.service';
 import { DisplayComponent } from '../display.component';
 
 @Component({
@@ -8,9 +9,7 @@ import { DisplayComponent } from '../display.component';
 })
 export class CertificadosComponent implements OnInit {
 
-  constructor(
-    private DisplayComponent:DisplayComponent
-  ) { }
+  constructor(private DisplayComponent:DisplayComponent,protected servicio:DesplazamientoService) { }
 
   ngOnInit(): void {
   }

@@ -4,20 +4,20 @@
       <!-- Email input -->
       <div class="form-outline mb-4">
         <label class="form-label" for="form2Example1">Email address</label>
-        <input type="email" id="form2Example1" class="form-control" />
+        <input type="text" id="form2Example1" class="form-control"  [(ngModel)] = 'user' />
         
       </div>
     
       <!-- Password input -->
       <div class="form-outline mb-4">
         <label class="form-label" for="form2Example2">Password</label>
-        <input type="password" id="form2Example2" class="form-control" />
+        <input type="password" id="form2Example2" class="form-control" [(ngModel)] = 'pass' />
         
       </div>
     
     
       <!-- Submit button -->
-      <button type="button" class="btn btn-danger btn-block mb-4"><p>Ingresar</p></button>
+      <button type="button" class="btn btn-danger btn-block mb-4" (click) = "log()"><p>Ingresar</p></button>
     
       
     </form>

@@ -1,5 +1,6 @@
 import { Component, OnInit,Input,Output } from '@angular/core';
 import { DesplazamientoService } from '../desplazamiento.service';
+import { EstudiosTokenComponent } from './estudios-token/estudios-token.component';
 
 @Component({
   selector: 'app-display',
@@ -14,8 +15,9 @@ export class DisplayComponent implements OnInit {
   lista3:number [] = [1,2,3,4,5,6]
 
   a:number = 0;
+ 
 
-  constructor(private servicio:DesplazamientoService) { }
+  constructor(protected servicio:DesplazamientoService) { }
 
   ngOnInit(): void {
     this.servicio.Ejecutar0.subscribe(data => {
@@ -31,6 +33,10 @@ export class DisplayComponent implements OnInit {
     this.servicio.Ejecutar2.subscribe(data =>{
       this.a = 2;
       console.log("conexion exitosa")
+    })
+
+    this.servicio.LoginSuccess.subscribe(data => {
+      this.servicio.show = 1;
     })
   }
 

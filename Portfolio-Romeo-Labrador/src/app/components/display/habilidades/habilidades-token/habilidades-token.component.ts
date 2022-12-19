@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DesplazamientoService } from 'src/app/components/desplazamiento.service';
 
 @Component({
   selector: 'app-habilidades-token',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HabilidadesTokenComponent implements OnInit {
 
-  constructor() { }
+  eliminar(){
+
+  }
+
+  guardar(){
+    
+  }
+
+  constructor(protected servicio:DesplazamientoService) { }
 
   ngOnInit(): void {
   }
