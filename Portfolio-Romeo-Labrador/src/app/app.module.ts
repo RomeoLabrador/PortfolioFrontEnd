@@ -30,6 +30,8 @@ import { LogindisplayComponent } from './login/logindisplay/logindisplay.compone
 import { EstTokenEditComponent } from './components/display/edit/est-token-edit/est-token-edit.component';
 import { CerTokenEditComponent } from './components/display/edit/cer-token-edit/cer-token-edit.component';
 import { PersonaPruebaComponent } from './model/persona-prueba/persona-prueba.component';
+import { interceptorProvider, InterceptorService } from './service/interceptor-service';
+
 
 @NgModule({
   declarations: [

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DesplazamientoService } from 'src/app/components/desplazamiento.service';
+import { Habilidad } from 'src/app/model/habilidad';
+import { SHabilidadService } from 'src/app/service/s-habilidad.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-habilidades-token',
@@ -8,17 +11,27 @@ import { DesplazamientoService } from 'src/app/components/desplazamiento.service
 })
 export class HabilidadesTokenComponent implements OnInit {
 
-  eliminar(){
 
-  }
+  habildad:Habilidad[] = [];
 
-  guardar(){
-    
-  }
 
-  constructor(protected servicio:DesplazamientoService) { }
+
+  constructor(protected servicio:DesplazamientoService,private sHabilidad:SHabilidadService,private tokenService:TokenService) { }
+
+  isLogged=false;
 
   ngOnInit(): void {
+    this.cargarHabilidad();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }
+    else{
+      this.isLogged = false;
+    }
+  }
+
+  cargarHabilidad():void{
+    this.sHabilidad.lista().subscribe(data => {this.habildad = data;})
   }
 
 }

@@ -1,23 +1,26 @@
 
-    <form class = "box rounded">
+    <form #f = "ngForm" (ngSubmit)="onLogin()" novalidate class = "box rounded">
       <h2>Verificar Identidad</h2>
       <!-- Email input -->
       <div class="form-outline mb-4">
-        <label class="form-label" for="form2Example1">Email address</label>
-        <input type="text" id="form2Example1" class="form-control"  [(ngModel)] = 'user' />
+        <input type="text" id="nombreUsuario" class="form-control" name ="nombreUsuario" [(ngModel)]="nombreUsuario" required>
+        <label class="form-label" for="nombreUsuario">Usuario</label>
+        
+        
         
       </div>
     
       <!-- Password input -->
       <div class="form-outline mb-4">
-        <label class="form-label" for="form2Example2">Password</label>
-        <input type="password" id="form2Example2" class="form-control" [(ngModel)] = 'pass' />
+        <input type="password" id="password" class="form-control" name ="nombreUsuario" [(ngModel)]="password" required />
+        <label class="form-label" for="password">Contraseña</label>
+        
         
       </div>
     
     
       <!-- Submit button -->
-      <button type="button" class="btn btn-danger btn-block mb-4" (click) = "log()"><p>Ingresar</p></button>
+      <button type="submit" class="btn btn-danger btn-block mb-4"><p>Ingresar</p></button>
     
       
     </form>
